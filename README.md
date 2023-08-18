@@ -15,7 +15,7 @@ Protect your web application with a simple bash script without complicated insta
 
 ## Installation
 
-Make sure you have ```qrencode```, ```oathtool```, ```sed```, ```openssl``` and ```jq``` installed on your machine. Almost every Linux distro has it.
+Make sure you have ```qrencode```, ```oathtool```, ```sed```, ```openssl```, ```jq``` and ```htpasswd```installed on your machine. Almost every Linux distro has it.
 
 ```bash
 git clone https://github.com/ThatGuyWithAVeryLongUsername/htpasswd-totp.git
