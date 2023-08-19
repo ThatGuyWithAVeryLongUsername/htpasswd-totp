@@ -24,7 +24,8 @@ cd htpasswd-totp
 # Just follow step of setup script
 sh ./setup.sh
 
-# It's STRONGLY recommended to assign "Only owner can read" (0600) rights to config.json, because config contains TOTP secret in plaintext.
+# It's STRONGLY recommended to assign "Only owner can read" (0600) rights to config.json. 
+# Because config contains TOTP secret in plaintext.
 
 chmod 0600 config.json
 chown root config.json
@@ -51,7 +52,7 @@ I highly recommend to setup [fail2ban](https://www.fail2ban.org/) to exclude bru
 #### What OTP app should I use?
 I successfully tested with [Aegis](https://getaegis.app/), [FreeOTP](https://freeotp.github.io/), [FreeOTP+](https://github.com/helloworld1/FreeOTPPlus), [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro), [Mauth](https://github.com/X1nto/Mauth), [KeePassDX](https://www.keepassdx.com/) and [KeePassXC](https://keepassxc.org/).
 
-**Apps that doesn't work:** Google's Authenticator, 1-2-Authenticate, Secur and OneTimePass.
+⚠️ Apps that doesn't work: Google's Authenticator, 1-2-Authenticate, Secur and OneTimePass.
 
 #### Why generated TOTPs has 30 minutes time window?
 Well, it's because [HTTP Basic access authentication limitations](https://en.wikipedia.org/wiki/Basic_access_authentication). Every connection to web server should be authenticated, with default time step size webserver will ask you to authenticate every 30 seconds.
