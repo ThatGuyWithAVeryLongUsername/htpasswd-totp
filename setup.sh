@@ -8,7 +8,7 @@
 SECRET=$(openssl rand -hex 5 | base32)
 
 # I have no idea why $HOST doesn't work
-TOTPString="otpauth://totp/"$(hostname)"?period=1080&issuer=htpasswd-topt&secret="$SECRET
+TOTPString="otpauth://totp/"$(hostname)"?period=1800&issuer=htpasswd-topt&secret="$SECRET
 
 # Some coloring
 RED="\e[31m"
@@ -21,7 +21,7 @@ echo -e "Scan this QR with your favorite 2FA app: \n"
 qrencode -m 2 -t utf8 <<< $TOTPString
 
 # Aegis, KeePassXC doesn't requre equals on end
-echo -e "\nOr type this secret manually:\n\t"$(echo $SECRET | sed 's/=//g')"\n\n${RED}DON'T FORGET TO SETUP 1080 SECOND TIME STEP SIZE${ENDCOLOR}\n"
+echo -e "\nOr type this secret manually:\n\t"$(echo $SECRET | sed 's/=//g')"\n\n${RED}DON'T FORGET TO SETUP 1800 SECOND TIME STEP SIZE${ENDCOLOR}\n"
 
 
 # Generage config.json
@@ -35,7 +35,7 @@ case "$responce" in
   [yY][eE][sS]|[yY])
     read -p "Type TOTP generated in your app: " TOTPin
 
-    if [ "$TOTPin" -eq "$(oathtool --totp -s 1080 --base32 $SECRET)" ]; then
+    if [ "$TOTPin" -eq "$(oathtool --totp -s 1800 --base32 $SECRET)" ]; then
       echo "Great! You have configured the TOTP app!"
       generateConfig
     else 
