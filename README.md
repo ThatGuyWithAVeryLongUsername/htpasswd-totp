@@ -47,7 +47,7 @@ generate-htpasswd.sh config.json /path/to/.htpasswd
 #### Is this 2FA for webserver?
 No, it's not 2FA, in fact it's **one** factor authentication, but with dynamicly updated password, calculated with TOTP algorythm. 
 
-I highly recommend to setup [fail2ban](https://www.fail2ban.org/) to exclude bruteforce attacks attemptions.
+I highly recommend to setup [fail2ban](https://www.fail2ban.org/) to exclude bruteforce attacks attempts.
 
 #### What OTP app should I use?
 I successfully tested with [Aegis](https://getaegis.app/), [FreeOTP](https://freeotp.github.io/), [FreeOTP+](https://github.com/helloworld1/FreeOTPPlus), [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro), [Mauth](https://github.com/X1nto/Mauth), [KeePassDX](https://www.keepassdx.com/) and [KeePassXC](https://keepassxc.org/).
