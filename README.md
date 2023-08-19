@@ -50,9 +50,11 @@ No, it's not 2FA, in fact it's **one** factor authentication, but with dynamical
 I highly recommend to setup [fail2ban](https://www.fail2ban.org/wiki/index.php/Category:HTTP) to exclude bruteforce attempts.
 
 #### What OTP app should I use?
+Any app that supports *custom time step size*.
+
 I successfully tested with [Aegis](https://getaegis.app/), [FreeOTP](https://freeotp.github.io/), [FreeOTP+](https://github.com/helloworld1/FreeOTPPlus), [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro), [Mauth](https://github.com/X1nto/Mauth), [KeePassDX](https://www.keepassdx.com/) and [KeePassXC](https://keepassxc.org/).
 
-⚠️ Apps that doesn't work: Google's Authenticator, 1-2-Authenticate, Secur and OneTimePass.
+⚠️ Apps that doesn't work: Google's Authenticator, Microsoft's Authenticator, 1-2-Authenticate, Secur and OneTimePass.
 
 #### Why generated TOTPs has 30 minutes time window?
 Well, it's because [HTTP Basic access authentication limitations](https://en.wikipedia.org/wiki/Basic_access_authentication). Every connection to web server should be authenticated, with default time step size webserver will ask you to authenticate every 30 seconds.
