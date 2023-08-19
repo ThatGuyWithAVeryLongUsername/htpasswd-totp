@@ -45,7 +45,7 @@ generate-htpasswd.sh config.json /path/to/.htpasswd
 
 ## FAQ
 #### Is this 2FA for webserver?
-No, it's not 2FA, in fact it's **one** factor authentication, but with dynamicly updated password, calculated with TOTP algorythm. 
+No, it's not 2FA, in fact it's **one** factor authentication, but with dynamically updated password, calculated with TOTP algorythm. 
 
 I highly recommend to setup [fail2ban](https://www.fail2ban.org/wiki/index.php/Category:HTTP) to exclude bruteforce attempts.
 
