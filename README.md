@@ -15,7 +15,7 @@ Protect your web application with a simple bash script without complicated insta
 
 ## Installation
 
-Make sure you have ```qrencode```, ```oathtool```, ```sed```, ```openssl```, ```jq``` and ```htpasswd``` installed on your machine. Almost every Linux distro has it.
+Make sure you have ```qrencode```, ```oathtool```, ```sed```, ```openssl```, ```jq``` and ```htpasswd``` is installed on your machine. Almost every Linux distro has it.
 
 ```bash
 git clone https://github.com/ThatGuyWithAVeryLongUsername/htpasswd-totp.git
@@ -54,9 +54,9 @@ Any app that supports *custom time step size*.
 
 I successfully tested with [Aegis](https://getaegis.app/), [FreeOTP](https://freeotp.github.io/), [FreeOTP+](https://github.com/helloworld1/FreeOTPPlus), [Authenticator Pro](https://github.com/jamie-mh/AuthenticatorPro), [Mauth](https://github.com/X1nto/Mauth), [KeePassDX](https://www.keepassdx.com/) and [KeePassXC](https://keepassxc.org/).
 
-⚠️ Apps that doesn't work: Google's Authenticator, Microsoft's Authenticator, 1-2-Authenticate, Secur and OneTimePass.
+⚠️ Apps that don't work: Google's Authenticator, Microsoft's Authenticator, 1-2-Authenticate, Secur and OneTimePass.
 
-#### Why generated TOTPs has 30 minutes time window?
+#### Why does generated TOTPs have 30 minutes time window?
 Well, it's because [HTTP Basic access authentication limitations](https://en.wikipedia.org/wiki/Basic_access_authentication). Every connection to web server should be authenticated, with default time step size webserver will ask you to authenticate every 30 seconds.
 
 
