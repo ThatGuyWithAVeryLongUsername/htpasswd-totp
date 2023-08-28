@@ -11,7 +11,7 @@ Protect your web application with a simple bash script without complicated insta
 
 ## Demo
 #### setup.sh
-[![asciicast](https://asciinema.org/a/603468.svg)](https://asciinema.org/a/603468)
+[![asciicast](https://asciinema.org/a/605160.svg)](https://asciinema.org/a/605160)
 
 ## Installation
 
