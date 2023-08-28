@@ -37,7 +37,7 @@ do
 done 
 
 # Check that config.json output is specified. If not - use default "config.json"
-if [ -z "$1"]
+if [ -z "$1" ]
 then
   cfgFile="config.json"
 else
