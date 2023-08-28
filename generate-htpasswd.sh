@@ -20,7 +20,7 @@ cat $htpasswdFile > /dev/null || touch $htpasswdFile
 # Infinite loop for generating new .htpasswd every 30s
 while :
 do
-    htpasswd -b $htpasswdFile $user $(oathtool --totp -s 1800 --base32 $secret)
-    sleep 30s
+  htpasswd -b $htpasswdFile $user $(oathtool --totp -s 1800 --base32 $secret)
+  sleep 30s
 done
 

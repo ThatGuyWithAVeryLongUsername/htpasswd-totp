@@ -22,10 +22,13 @@ git clone https://github.com/ThatGuyWithAVeryLongUsername/htpasswd-totp.git
 cd htpasswd-totp
 
 # Just follow step of setup script
+# This one generates config.json
 sh ./setup.sh
+# Or specify your name:
+sh ./setup.sh custom.json
 
-# It's STRONGLY recommended to assign "Only owner can read" (0600) rights to config.json. 
-# Because config contains TOTP secret in plaintext.
+# It's STRONGLY recommended to assign "Only owner can read" (0600) rights to config.json,
+# because config contains TOTP secret in plaintext.
 
 chmod 0600 config.json
 chown root config.json
